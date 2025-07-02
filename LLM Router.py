@@ -85,10 +85,9 @@ def dispatch_query(model_choice: str, query: str):
     elif model_choice == "Gemini":
         genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
         
-        model = genai.GenerativeModel("gemini-1.5-flash")  # or "gemini-pro", "gemini-1.0", etc.
+        model = genai.GenerativeModel("gemini-1.5-flash") 
         response = model.generate_content(query)
         print(response.text)
-
 
     elif model_choice == "DeepSeek":
         client = OpenAI(api_key=os.getenv("DEEPSEEK_API_KEY"), base_url="https://api.deepseek.com")
