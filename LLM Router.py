@@ -6,7 +6,6 @@ from dotenv import load_dotenv
 from openai import OpenAI
 
 import anthropic
-# from google import genai
 import google.generativeai as genai
 
 load_dotenv()
@@ -126,9 +125,3 @@ while True:
     model_choice = route_query(query)
     print(f"Model chosen for the query: {model_choice}")
     dispatch_query(model_choice, query)
-
-#model choice gives us the model name to use for the query
-# if model_choice := route_query("What is the best model to answer this query?"):
-#     print(f"Model chosen for the query: {model_choice}")
-# else:   
-#     print("No suitable model found for the query.")   
